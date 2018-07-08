@@ -41,7 +41,13 @@ export class Board {
         Returns an array of indexes representing the empty Tiles on the board
     */
     getEmptyTiles() {
-        return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        var emptyArray: Array<number> = [];
+        for (var i = 0; i < this.Board.length; i++) {
+            if (!this.Board[i]) {
+                emptyArray.push(i);
+            }
+        }
+        return emptyArray;
     }
 
     /*
